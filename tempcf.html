@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 70vh;
+        width: 70vw;
+        border: 5px solid black;
+        margin: auto;
+        padding: 10px;
+        margin-top: 50px;
+        font-size: 20px;
+        background-color: greenyellow;  
+    }
+    button{
+     background-color: #17773456;
+    color: rgb(136, 26, 26);
+    border: 1px solid black;
+    padding: 15px ,15px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;   
+} 
+.alfa{
+    text-align: center;
+}
+
+#number{
+   
+    height: 40px;
+    width: 40px;
+    text-align:center;
+
+}
+h1{
+    text-align: center;
+    background-color: rgb(60, 216, 28);
+
+   }
+.result{
+    width: 100%;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+     <hr>
+
+
+        <div class="alfa">
+         <label for="enter">Enter the temp:-</label>
+         <input type="text" name="" id="enter" title="Enter temperature" placeholder="Enter temperature">
+         <br><br>
+        <input type="radio" name="2" id="check" checked> 
+        <label for="check">convert farenheit to celsius</label>
+        <input type="radio" name="2" id="apple" >
+        <label for="apple">convert celsius to farenheit </label>
+        <br><br>
+        <button onclick="clickMe()">convert</button>
+        <div class="result">
+            <h1>Result</h1>
+            <div id="number2"></div>
+            
+        </div>
+        </div>
+        
+    </div>
+    <script>
+        let entervalue= document.getElementById('enter');
+        let gama=document.getElementById('check');
+        let pita=document.getElementById('apple');
+        let result=document.getElementById('number2')
+
+        function clickMe() {   
+        let temp =(entervalue.value);
+            if (gama.checked) {
+                result.textContent = ((temp - 32) * 5 / 9);
+            } else if (pita.checked) {
+                result.textContent = ((temp * 9 / 5) + 32);
+            }
+            
+        }
+        
+
+    </script>
+</body>
+</html>
